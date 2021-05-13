@@ -1,15 +1,14 @@
 import json
 import os.path
 
-def verificar():
+def verificar(nome):
     veri = False
     while veri==False:
-        site = input("Qual o nome do ficheiro pretendido ")
-        if(os.path.isfile(site)):
-            print(f"{site}")
+        if(os.path.isfile(nome)):
+            print(f"{nome}")
             veri=True
         else:
-            print("Não existe tente outra vez ")
+            nome = input("Qual o nome do ficheiro pretendido ")
     return veri
 def por_json(nome):
     if(nome.find(".")==0):
@@ -19,5 +18,5 @@ def por_json(nome):
     else:
         nome_perar = nome.split('.')
         print(f"{nome_perar[0]}.json ")
-        with open(f'{nome}', 'w') as json_file:
-            json.dump("ola", json_file)
+        with open(f'{nome}.json', 'w') as json_file:
+            json.dump("ola", json_file, indent= 4)
