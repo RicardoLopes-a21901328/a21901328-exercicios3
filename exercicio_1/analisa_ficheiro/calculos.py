@@ -10,3 +10,6 @@ def calcular_lines(nome):
         print(conter)
     else:
         print("nao existe")
+
+def calcular_palavras(nome):
+    print("0")

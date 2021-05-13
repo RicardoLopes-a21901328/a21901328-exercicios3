@@ -9,7 +9,7 @@ def verificar():
             print(f"{site}")
             veri=True
         else:
-            print("Não existe tente outra vez")
+            print("Não existe tente outra vez ")
     return veri
 def por_json(nome):
     if(nome.find(".")==0):
@@ -18,6 +18,6 @@ def por_json(nome):
             json.dump("dados", json_file)
     else:
         nome_perar = nome.split('.')
-        print(f"{nome_perar[0]}.json")
+        print(f"{nome_perar[0]}.json ")
         with open(f'{nome}', 'w') as json_file:
             json.dump("ola", json_file)
