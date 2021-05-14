@@ -18,5 +18,5 @@ def por_json(nome):
     else:
         nome_perar = nome.split('.')
         print(f"{nome_perar[0]}.json ")
-        with open(f'{nome}.json', 'w') as json_file:
+        with open(f'{nome_perar[0]}.json', 'w') as json_file:
             json.dump("ola", json_file, indent= 4)
